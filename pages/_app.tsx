@@ -1,7 +1,8 @@
 import React from "react";
 import App, { Container, NextAppContext } from "next/app";
 import { Header } from "../components";
-import { GlobalStyle } from "../components/theme";
+import { CustomThemeProvider } from "../components/theme";
+import { LanguageProvider } from "../i18n";
 
 class MyApp extends App {
   static async getInitialProps({ Component, ctx }: NextAppContext) {
@@ -19,9 +20,12 @@ class MyApp extends App {
 
     return (
       <Container>
-        <Header />
-        <GlobalStyle />
-        <Component {...pageProps} />
+        <LanguageProvider>
+          <CustomThemeProvider>
+            <Header />
+            <Component {...pageProps} />
+          </CustomThemeProvider>
+        </LanguageProvider>
       </Container>
     );
   }

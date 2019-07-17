@@ -62,7 +62,7 @@ var Index = function Index() {
 
 /***/ }),
 
-/***/ 0:
+/***/ 3:
 /*!**************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fdogancan%2FDesktop%2FDevelopment%2Fmy%2Fcity-notes%2Fpages%2Findex.tsx ***!
   \**************************************************************************************************************************************************/
@@ -85,5 +85,5 @@ module.exports = dll_829b10deddf10e1653a8;
 
 /***/ })
 
-},[[0,"static/runtime/webpack.js"]]]);
+},[[3,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map

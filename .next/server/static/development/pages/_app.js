@@ -105,23 +105,41 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Header", function() { return Header; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "styled-components");
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @material-ui/core */ "@material-ui/core");
+/* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react_intl__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-intl */ "react-intl");
+/* harmony import */ var react_intl__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_intl__WEBPACK_IMPORTED_MODULE_2__);
 var _jsxFileName = "/Users/dogancan/Desktop/Development/my/city-notes/components/header.tsx";
 
 
-var Root = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.header.withConfig({
-  displayName: "header__Root",
-  componentId: "hz8jjw-0"
-})(["width:100%;height:60px;border-bottom:1px solid grey;text-align:center;line-height:60px;"]);
+
 var Header = function Header() {
-  return react__WEBPACK_IMPORTED_MODULE_0__["createElement"](Root, {
+  return react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_material_ui_core__WEBPACK_IMPORTED_MODULE_1__["AppBar"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12
+      lineNumber: 6
     },
     __self: this
-  }, "Header");
+  }, react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_material_ui_core__WEBPACK_IMPORTED_MODULE_1__["Toolbar"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_material_ui_core__WEBPACK_IMPORTED_MODULE_1__["Typography"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0__["createElement"](react_intl__WEBPACK_IMPORTED_MODULE_2__["FormattedMessage"], {
+    id: "header.title",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9
+    },
+    __self: this
+  }))));
 };
 
 /***/ }),
@@ -142,10 +160,30 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./components/theme.tsx":
-/*!******************************!*\
-  !*** ./components/theme.tsx ***!
-  \******************************/
+/***/ "./components/theme/color-scheme.tsx":
+/*!*******************************************!*\
+  !*** ./components/theme/color-scheme.tsx ***!
+  \*******************************************/
+/*! exports provided: Color */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Color", function() { return Color; });
+var Color = {
+  blue: "#1F3044",
+  grey: "#646C79",
+  platinum: "#E8E8E8",
+  silver: "#BFBFBF",
+  saffron: "#FB9039"
+};
+
+/***/ }),
+
+/***/ "./components/theme/global.tsx":
+/*!*************************************!*\
+  !*** ./components/theme/global.tsx ***!
+  \*************************************/
 /*! exports provided: GlobalStyle */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -169,6 +207,152 @@ function _templateObject() {
 
 
 var GlobalStyle = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["createGlobalStyle"])(_templateObject());
+
+/***/ }),
+
+/***/ "./components/theme/index.tsx":
+/*!************************************!*\
+  !*** ./components/theme/index.tsx ***!
+  \************************************/
+/*! exports provided: GlobalStyle, CustomThemeProvider */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _global__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./global */ "./components/theme/global.tsx");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "GlobalStyle", function() { return _global__WEBPACK_IMPORTED_MODULE_0__["GlobalStyle"]; });
+
+/* harmony import */ var _theme__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./theme */ "./components/theme/theme.tsx");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "CustomThemeProvider", function() { return _theme__WEBPACK_IMPORTED_MODULE_1__["CustomThemeProvider"]; });
+
+
+
+
+/***/ }),
+
+/***/ "./components/theme/theme.tsx":
+/*!************************************!*\
+  !*** ./components/theme/theme.tsx ***!
+  \************************************/
+/*! exports provided: CustomThemeProvider */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CustomThemeProvider", function() { return CustomThemeProvider; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _material_ui_core_styles__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @material-ui/core/styles */ "@material-ui/core/styles");
+/* harmony import */ var _material_ui_core_styles__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _color_scheme__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./color-scheme */ "./components/theme/color-scheme.tsx");
+/* harmony import */ var _global__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./global */ "./components/theme/global.tsx");
+var _jsxFileName = "/Users/dogancan/Desktop/Development/my/city-notes/components/theme/theme.tsx";
+
+
+
+
+var customTheme = Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_1__["createMuiTheme"])({
+  palette: {
+    primary: {
+      main: _color_scheme__WEBPACK_IMPORTED_MODULE_2__["Color"].blue
+    },
+    secondary: {
+      main: _color_scheme__WEBPACK_IMPORTED_MODULE_2__["Color"].saffron
+    }
+  }
+});
+var theme = Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_1__["responsiveFontSizes"])(customTheme);
+var CustomThemeProvider = function CustomThemeProvider(_ref) {
+  var children = _ref.children;
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_1__["MuiThemeProvider"], {
+    theme: theme,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 22
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_global__WEBPACK_IMPORTED_MODULE_3__["GlobalStyle"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 23
+    },
+    __self: this
+  }), children);
+};
+
+/***/ }),
+
+/***/ "./i18n/en.tsx":
+/*!*********************!*\
+  !*** ./i18n/en.tsx ***!
+  \*********************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ({
+  locale: 'en',
+  messages: {
+    'header.title': 'City Notes'
+  }
+});
+
+/***/ }),
+
+/***/ "./i18n/index.tsx":
+/*!************************!*\
+  !*** ./i18n/index.tsx ***!
+  \************************/
+/*! exports provided: LanguageProvider */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _intl_provider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./intl-provider */ "./i18n/intl-provider.tsx");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "LanguageProvider", function() { return _intl_provider__WEBPACK_IMPORTED_MODULE_0__["LanguageProvider"]; });
+
+
+
+/***/ }),
+
+/***/ "./i18n/intl-provider.tsx":
+/*!********************************!*\
+  !*** ./i18n/intl-provider.tsx ***!
+  \********************************/
+/*! exports provided: LanguageProvider */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LanguageProvider", function() { return LanguageProvider; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_intl__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-intl */ "react-intl");
+/* harmony import */ var react_intl__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_intl__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _en__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./en */ "./i18n/en.tsx");
+var _jsxFileName = "/Users/dogancan/Desktop/Development/my/city-notes/i18n/intl-provider.tsx";
+
+
+
+var LanguageProvider = function LanguageProvider(_ref) {
+  var children = _ref.children;
+  return react__WEBPACK_IMPORTED_MODULE_0__["createElement"](react_intl__WEBPACK_IMPORTED_MODULE_1__["IntlProvider"], {
+    locale: "en",
+    messages: _en__WEBPACK_IMPORTED_MODULE_2__["default"].messages,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0__["createElement"](react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7
+    },
+    __self: this
+  }, children));
+};
 
 /***/ }),
 
@@ -1084,7 +1268,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_app__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! next/app */ "./node_modules/next/app.js");
 /* harmony import */ var next_app__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(next_app__WEBPACK_IMPORTED_MODULE_9__);
 /* harmony import */ var _components__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../components */ "./components/index.tsx");
-/* harmony import */ var _components_theme__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../components/theme */ "./components/theme.tsx");
+/* harmony import */ var _components_theme__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../components/theme */ "./components/theme/index.tsx");
+/* harmony import */ var _i18n__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../i18n */ "./i18n/index.tsx");
 
 
 
@@ -1094,6 +1279,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var _jsxFileName = "/Users/dogancan/Desktop/Development/my/city-notes/pages/_app.tsx";
+
 
 
 
@@ -1119,28 +1305,34 @@ function (_App) {
       return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(next_app__WEBPACK_IMPORTED_MODULE_9__["Container"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 21
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_10__["Header"], {
-        __source: {
-          fileName: _jsxFileName,
           lineNumber: 22
         },
         __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_components_theme__WEBPACK_IMPORTED_MODULE_11__["GlobalStyle"], {
+      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_i18n__WEBPACK_IMPORTED_MODULE_12__["LanguageProvider"], {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 23
         },
         __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(Component, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_2__["default"])({}, pageProps, {
+      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_components_theme__WEBPACK_IMPORTED_MODULE_11__["CustomThemeProvider"], {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 24
         },
         __self: this
-      })));
+      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_10__["Header"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 25
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(Component, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_2__["default"])({}, pageProps, {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 26
+        },
+        __self: this
+      })))));
     }
   }], [{
     key: "getInitialProps",
@@ -1204,6 +1396,28 @@ function (_App) {
 
 module.exports = __webpack_require__(/*! private-next-pages/_app.tsx */"./pages/_app.tsx");
 
+
+/***/ }),
+
+/***/ "@material-ui/core":
+/*!************************************!*\
+  !*** external "@material-ui/core" ***!
+  \************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("@material-ui/core");
+
+/***/ }),
+
+/***/ "@material-ui/core/styles":
+/*!*******************************************!*\
+  !*** external "@material-ui/core/styles" ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("@material-ui/core/styles");
 
 /***/ }),
 
@@ -1358,6 +1572,17 @@ module.exports = require("prop-types");
 /***/ (function(module, exports) {
 
 module.exports = require("react");
+
+/***/ }),
+
+/***/ "react-intl":
+/*!*****************************!*\
+  !*** external "react-intl" ***!
+  \*****************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("react-intl");
 
 /***/ }),
 
