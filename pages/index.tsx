@@ -1,10 +1,7 @@
 import * as React from "react";
-import { Page } from "../components/page";
 
 const Index: React.FunctionComponent = () => (
-  <Page>
-    Home Page
-  </Page>
+  <React.Fragment>Home Page</React.Fragment>
 );
 
 export default Index;
