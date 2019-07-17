@@ -16,7 +16,7 @@ const customTheme = createMuiTheme({
     }
   }
 });
-const theme = responsiveFontSizes(customTheme);
+export const theme = responsiveFontSizes(customTheme);
 
 export const CustomThemeProvider: React.FunctionComponent = ({ children }) => (
   <MuiThemeProvider theme={theme}>

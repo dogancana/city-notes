@@ -14,37 +14,40 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @material-ui/core */ "./node_modules/@material-ui/core/esm/index.js");
 /* harmony import */ var react_intl__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-intl */ "./node_modules/react-intl/lib/index.es.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+/* harmony import */ var _theme__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./theme */ "./components/theme/index.tsx");
 var _jsxFileName = "/Users/dogancan/Desktop/Development/my/city-notes/components/header.tsx";
 
 
 
+
+
+var Root = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].header.withConfig({
+  displayName: "header__Root",
+  componentId: "hz8jjw-0"
+})(["width:100%;height:50px;position:sticky;top:0;display:flex;align-items:center;justify-content:center;background-color:", ";color:", ";"], _theme__WEBPACK_IMPORTED_MODULE_4__["theme"].palette.primary.main, _theme__WEBPACK_IMPORTED_MODULE_4__["theme"].palette.primary.contrastText);
 var Header = function Header() {
-  return react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_material_ui_core__WEBPACK_IMPORTED_MODULE_1__["AppBar"], {
+  return react__WEBPACK_IMPORTED_MODULE_0__["createElement"](Root, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 6
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_material_ui_core__WEBPACK_IMPORTED_MODULE_1__["Toolbar"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 7
+      lineNumber: 20
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_material_ui_core__WEBPACK_IMPORTED_MODULE_1__["Typography"], {
+    variant: "h6",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 8
+      lineNumber: 21
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0__["createElement"](react_intl__WEBPACK_IMPORTED_MODULE_2__["FormattedMessage"], {
     id: "header.title",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9
+      lineNumber: 22
     },
     __self: this
-  }))));
+  })));
 };
 
 /***/ }),
@@ -97,10 +100,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GlobalStyle", function() { return GlobalStyle; });
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral */ "./node_modules/@babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral.js");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+/* harmony import */ var _color_scheme__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./color-scheme */ "./components/theme/color-scheme.tsx");
 
 
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  html, body {\n    scroll-behavior: smooth;\n    min-width: 320px;\n  }\n\n  body {\n    padding: 0;\n    margin: 0;\n  }\n\n  *, *:before, *:after {\n    box-sizing: border-box;\n  }\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  html {\n    min-width: 320px;\n    background-color: ", ";\n  }\n\n  html, body {\n    height: 100%;\n    scroll-behavior: smooth;\n    width: 100%;\n    overflow-x: hidden;\n  }\n\n  body {\n    padding: 0;\n    margin: 0;\n  }\n\n  #__next {\n    min-height: 100%;\n  }\n\n  *, *:before, *:after {\n    box-sizing: border-box;\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -110,7 +114,8 @@ function _templateObject() {
 }
 
 
-var GlobalStyle = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["createGlobalStyle"])(_templateObject());
+
+var GlobalStyle = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["createGlobalStyle"])(_templateObject(), _color_scheme__WEBPACK_IMPORTED_MODULE_2__["Color"].platinum);
 
 /***/ }),
 
@@ -118,7 +123,7 @@ var GlobalStyle = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["createG
 /*!************************************!*\
   !*** ./components/theme/index.tsx ***!
   \************************************/
-/*! exports provided: GlobalStyle, CustomThemeProvider */
+/*! exports provided: GlobalStyle, theme, CustomThemeProvider */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -127,6 +132,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "GlobalStyle", function() { return _global__WEBPACK_IMPORTED_MODULE_0__["GlobalStyle"]; });
 
 /* harmony import */ var _theme__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./theme */ "./components/theme/theme.tsx");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "theme", function() { return _theme__WEBPACK_IMPORTED_MODULE_1__["theme"]; });
+
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "CustomThemeProvider", function() { return _theme__WEBPACK_IMPORTED_MODULE_1__["CustomThemeProvider"]; });
 
 
@@ -138,11 +145,12 @@ __webpack_require__.r(__webpack_exports__);
 /*!************************************!*\
   !*** ./components/theme/theme.tsx ***!
   \************************************/
-/*! exports provided: CustomThemeProvider */
+/*! exports provided: theme, CustomThemeProvider */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "theme", function() { return theme; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CustomThemeProvider", function() { return CustomThemeProvider; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
@@ -195,9 +203,11 @@ var CustomThemeProvider = function CustomThemeProvider(_ref) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
-  locale: 'en',
+  locale: "en",
   messages: {
-    'header.title': 'City Notes'
+    "header.title": "City Notes",
+    "home.motto": "Share everything about your city",
+    "home.description": "Search for your your beloved city and create travel notes for your friends or family."
   }
 });
 
